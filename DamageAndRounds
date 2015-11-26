@@ -1,0 +1,10 @@
+#Print id of the winner and number of rounds needed to win e.g.:"1 50"
+@hp1, @d1 = gets.split(" ").collect {|x| x.to_i}#person1 damage1
+@hp2, @d2 = gets.split(" ").collect {|x| x.to_i}
+@a=0
+while @hp1>0 && @hp2>0 do
+    @hp1-=@d2
+    @hp2-=@d1
+    @a+=1
+end
+puts (@hp1>0? 1 : 2).to_s+" "+@a.to_s
