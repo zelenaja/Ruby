@@ -1,0 +1,10 @@
+# Print LowestCommonMultiplier for elements in array
+
+@n = gets.to_i
+inputs = gets.split(" ")
+m=Array[]
+for i in 0..(@n-1)
+    m<< inputs[i].to_i
+end
+
+puts m.reduce(:lcm)
